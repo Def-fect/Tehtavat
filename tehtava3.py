@@ -1,1 +1,0 @@
-print("tehhatva3")
