@@ -1,11 +1,11 @@
 hytti=str(input('kirjoita hyttiluokan: '))
-if hytti == str('LUX'):
+if hytti == 'LUX':
     print("LUX on parvekkeellinen hytti yläkannella.")
-elif hytti == str('A'):
+elif hytti == 'A':
     print("A on ikkunallinen hytti autokannen yläpuolella.")
-elif hytti == str('B'):
+elif hytti == 'B':
     print("B on ikkunaton hytti autokannen yläpuolella.")
-elif hytti == str('C'):
+elif hytti == 'C':
     print("C on ikkunaton hytti autokannen yläpuolella.")
 else:
     print('Virheellinen hyttiluokka')

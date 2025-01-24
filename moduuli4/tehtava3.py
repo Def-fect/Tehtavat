@@ -1,7 +1,12 @@
-luku=[]
-merkkijono = 1
-while int(merkkijono) >0:
-    merkkijono = input('Anna merkkijono: ')
-    print('merkkijonosi: ' + merkkijono)
-    if merkkijono ==' ':
-        print(min(merkkijono) + max(merkkijono))
+max, min =0, None
+while True:
+    merkkijono =(input("Anna merkkijono"))
+    if merkkijono == "":
+        break
+    merkkijono=int(merkkijono)
+    if min is None or merkkijono < min:
+        min=merkkijono
+    if merkkijono > max:
+        max = merkkijono
+print(f"Pienin luku :{min}")
+print(f"Pienin luku :{max}")
