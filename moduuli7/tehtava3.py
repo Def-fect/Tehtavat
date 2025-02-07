@@ -1,5 +1,3 @@
-
-
 lentoasema=set()
 
 while True:

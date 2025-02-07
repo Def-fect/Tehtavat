@@ -12,3 +12,5 @@ while True:
 print("Annetut nimet")
 for userinput in nimet:
     print(userinput)
+
+
