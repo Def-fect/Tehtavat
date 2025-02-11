@@ -12,14 +12,16 @@ yhteys = pymysql.connect(
     autocommit=True,
 
 )
+x=input("Anna koodi")
 
+sql = (f"select country.name, airport.name "
+       f"from airport, country "
+       f"where airport.iso_country=country.iso_country and airport.ident='{x}';"
 
-sql = (f"SELECT * from airport limit 10")
+)
 print(sql)
 kursori = yhteys.cursor()
 kursori.execute(sql)
 tulos = kursori.fetchall()
 
 print(tulos)
-#Process finished with exit code -1073741819 (0xC0000005)
-#Process finished with exit code -1073741819 (0xC0000005)
