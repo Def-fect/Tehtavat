@@ -9,16 +9,16 @@ yhteys = pymysql.connect(
     autocommit=True,
 )
 
+x=input("anna maan koodi")
 
+sql = (f"select type, count(*) "
+       f"from airport "
+       f"where iso_country in( "
+       f"select iso_country from country "
+       f"where country.iso_country='{x}')"
+       f"group by type;"
+       )
 
-sql = (f"select 'Maan nimi: ' (country.name), 'Lentokenttän nimi: ' (airport.name) "
-       f"from airport, country "
-       f"where airport.iso_country = country.iso_country and airport.ident = 'SVAR';"
-)
-
-print(sql)
-
-print(sql)
 kursori = yhteys.cursor()
 kursori.execute(sql)
 tulos = kursori.fetchall()
@@ -26,11 +26,4 @@ tulos = kursori.fetchall()
 print(tulos)
 
 
-select name, type, count(*)
-from airport
-where iso_country in(
-	select iso_country
-	from country
-	where country.name="Finland"
-	group by type
-);
+
