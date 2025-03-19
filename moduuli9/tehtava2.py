@@ -24,8 +24,7 @@ class Auto:
 
 auto = Auto("ABC-123", 142, 0, 0)
 auto.kiiht()
-
-
 print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.kiihdytä}km/h ja {auto.kuljettu_matka}km")
+
 auto.jarr()
 print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.kiihdytä}km/h ja {auto.kuljettu_matka}km")

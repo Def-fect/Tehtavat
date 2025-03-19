@@ -32,11 +32,6 @@ class Auto:
 
 
 auto = Auto("ABC-123", 142, 0, 2000)
-auto.kiiht()
-print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.kiihdytä}km/h ja {auto.kuljettu_matka}km")
-
-print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.kiihdytä}km/h ja {auto.kuljettu_matka}km")
-
 
 auto.kulje(1.5)
 print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.kiihdytä}km/h ja {auto.kuljettu_matka}km")
