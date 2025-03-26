@@ -1,49 +1,43 @@
 import random
 class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus, kiihdytä, kuljettu_matka):
+    def __init__(self, rekisteritunnus, huippunopeus):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
-        self.kiihdytä = kiihdytä
-        self.kuljettu_matka = kuljettu_matka
+        self.nopeus = 0
+        self.matka = 0
 
 
-    #laitetaan ensin huippunopeus
-    def randhuip(self):
-        self.huippunopeus = random.randint(100,200)
-
-    def kiiht(self):
-        self.kiihdytä = random.randint(-10, 15)
-        if self.kiihdytä > self.huippunopeus:
-            self.kiihdytä = self.huippunopeus
-        return
-
-
+    def kiihdyta(self):
+        self.nopeus += random.randint(-10, 15)
+        self.matka += self.nopeus
+        if self.nopeus > self.huippunopeus:
+            self.nopeus = self.huippunopeus
+        if self.nopeus < 0:
+            self.nopeus = 0
 
     def kulje(self, tunti):
-        self.kiihdytä == autot.kiiht()
-        valimatka= self.kiihdytä * tunti
-        self.kuljettu_matka += valimatka
-
-
+        self.matka += self.nopeus * tunti
 
 
 autot = []
 
 for i in range(10):
     i+=1
-    randhuip = random.randint(100, 200)
-    randnope = random.randint(-10, 15)
-    autot.append(Auto(f"ABC-{i}", randhuip, randnope, 0))
+    autot.append(Auto(f"ABC-{i}", random.randint(100, 200)))
 
+kilpailu_kaynnissa = True
+while kilpailu_kaynnissa:
+    for auto in autot:
 
+        auto.kiihdyta()
 
+        auto.kulje(1)
 
-for auto in autot:
-    print(f"{autot.rekisteritunnus} {auto.kiihdytä}")
-print(autot)
+        if auto.matka >= 10000:
+            kilpailu_kaynnissa = False
+            break
 
-#toimiva
 autot.sort(key=lambda a: a.matka, reverse=True)
 for auto in autot:
-    print()
+    print(f"{auto.rekisteritunnus} {auto.huippunopeus} {auto.nopeus} {auto.matka}")
 
