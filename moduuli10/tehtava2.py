@@ -17,14 +17,17 @@ class Hissi:
         while self.kerros > siirry:
             hissi.kerros_alas()
 class Talo:
-    def __init__(self, alin, ylin):
-        self.alin = alin
-        self.ylin = ylin
+    def __init__(self, alin_nro, ylin_nro, kerros):
+        self.alin_nro = alin_nro
+        self.ylin_nro = ylin_nro
 
     def aja_hissiä:
 
-
+hissit = []
 hissi = Hissi(0)
+
+talo = Talo(0, 10, 3)
+
 print(f"{hissi.kerros}")
 hissi.siirry_kerrokseen(5)
 print(f"{hissi.kerros}")
