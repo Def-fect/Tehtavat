@@ -5,4 +5,5 @@ class Auto:
         self.tämänhetkinen_nopeus = tämänhetkinen_nopeus
         self.kuljettu_matka = kuljettu_matka
 auto = Auto("ABC-123", 142, 0, 0)
+
 print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} ja {auto.tämänhetkinen_nopeus} ja {auto.kuljettu_matka}")

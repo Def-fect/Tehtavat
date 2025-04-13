@@ -1,27 +1,27 @@
 class Auto:
-    def __init__(self, rekisteritunnus, huippunopeus, nopeus, kuljettu_matka):
+    def __init__(self, rekisteritunnus, huippunopeus, kiihdytä, kuljettu_matka):
         self.rekisteritunnus = rekisteritunnus
         self.huippunopeus = huippunopeus
-        self.nopeus = nopeus
+        self.kiihdytä = kiihdytä
         self.kuljettu_matka = kuljettu_matka
 
     def kiiht(self):
-        self.nopeus += 30
-        self.nopeus += 70
-        self.nopeus += 50
-        if self.nopeus > 142:
-            self.nopeus = 142
+        self.kiihdytä += 30
+        self.kiihdytä += 70
+        self.kiihdytä += 50
+        if self.kiihdytä > 142:
+            self.kiihdytä = 142
 
     def jarr(self):
-        self.nopeus -=200
-        if self.nopeus < 0:
-            self.nopeus = 0
+        self.kiihdytä -=200
+        if self.kiihdytä < 0:
+            self.kiihdytä = 0
 
 
 
     def kulje(self, tunti):
-        self.nopeus += 60
-        valimatka= self.nopeus * tunti
+        self.kiihdytä += 60
+        valimatka= self.kiihdytä * tunti
         self.kuljettu_matka += valimatka
 
 
@@ -34,4 +34,4 @@ class Auto:
 auto = Auto("ABC-123", 142, 0, 2000)
 
 auto.kulje(1.5)
-print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.nopeus}km/h ja {auto.kuljettu_matka}km")
+print(f"{auto.rekisteritunnus} ja {auto.huippunopeus} km/h ja {auto.kiihdytä}km/h ja {auto.kuljettu_matka}km")
