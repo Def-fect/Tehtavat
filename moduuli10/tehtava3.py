@@ -1,3 +1,6 @@
+import time
+
+
 class Hissi:
     def __init__(self, alin_kerros, ylin_kerros):
         self.alin_kerros = alin_kerros
@@ -30,9 +33,13 @@ class Talo:
 
     def aja_hissia(self, hissin_numero, kohdekerros):
         hissi = self.hissit[hissin_numero]
-        print(f"nro{hissin_numero} kerroS {kohdekerros}")
+        print(f"nro {hissin_numero} kerroS {kohdekerros}")
         hissi.siirry_kerrokseen(kohdekerros)
 
+    def palohalytys(self):
+        talo.aja_hissia(0, 0)
+        talo.aja_hissia(1, 0)
+        talo.aja_hissia(2, 0)
 
 
 
@@ -40,4 +47,7 @@ class Talo:
 talo = Talo(0, 10, 3)
 talo.aja_hissia(0, 5)
 talo.aja_hissia(1, 3)
-talo.aja_hissia(2, 0)
+talo.aja_hissia(2, 4)
+print("Nyt tulee palohälytys")
+time.sleep(5)
+talo.palohalytys()
