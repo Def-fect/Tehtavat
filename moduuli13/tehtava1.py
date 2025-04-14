@@ -4,9 +4,9 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/alkuluku/<luku1>')
-def tarkista_alkuluku(luku1):
-    luku1 = float(luku1)
+@app.route('/alkuluku/<luku2>')
+def tarkista_alkuluku(luku2):
+    luku1 = float(luku2)
     try:
         if luku1 > 1:
             for i in range(2, int(luku1 ** 0.5) + 1):
